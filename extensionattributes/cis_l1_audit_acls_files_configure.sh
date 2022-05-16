@@ -7,9 +7,9 @@ cis_l1_audit_acls_files_configure=$(/bin/ls -le $(/usr/bin/grep '^dir' /etc/secu
 ## Write results based on output
 
 if [ $cis_l1_audit_acls_files_configure == 0 ]; then
-    echo "<result>Secure</result>"
+    echo "<result>Compliant</result>"
 elif [ $cis_l1_audit_acls_files_configure == 1 ]; then
-    echo "<result>Failure</result>"
+    echo "<result>Non-compliant</result>"
 else
     echo "<result>Error</result>"
 fi
